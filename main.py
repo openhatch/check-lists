@@ -2,10 +2,13 @@ import urllib2
 import lxml.html
 import sys
 
-def getLivePage():
-    return urllib2.urlopen('http://lists.openhatch.org/mailman/admin').read()
+def getLivePage(name): # mailman or fancy
+    if name == "mailman":
+        return urllib2.urlopen('http://lists.openhatch.org/mailman/admin').read()
+    if name == "fancy":
+        return urllib2.urlopen('http://jeweledplatypus.org/listinfo.html').read()
 
-def getCachedPage(name):  # 
+def getCachedPage(name):  # mailman or fancy
     return open(name).read()
 
 def pageToListNames(content):
@@ -14,8 +17,8 @@ def pageToListNames(content):
     return [x.rsplit("/",1)[1] for x in raw_html]
 
 def callAThing():
-    mailman = pageToListNames(getPage(mailman, "live"))
-    fancy = pageToListNames(getPage(fancy, "live"))
+    mailman = pageToListNames(getLivePage("mailman"))
+    fancy = pageToListNames(getLivePage("fancy"))
     if set(mailman) == set(fancy):
         sys.exit(0)
     else:
