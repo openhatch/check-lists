@@ -1,0 +1,3661 @@
+<html lang="en" dir="ltr" class="javascript_is_enabled"><head>
+
+
+        <title>
+
+            OpenHatch -
+Events that grow open coding communities
+
+
+        </title>
+
+        <link rel="shortcut icon" href="/favicon.ico">
+
+        <link rel="canonical" href="https://openhatch.org/events/">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Language" content="en-us">
+        <meta name="Description" content="OpenHatch, the open source involvement engine.">
+
+        <style type="text/css"> /*<![CDATA[*/
+
+
+            @import url(http://openhatch.org/static/packed/openhatch.css?1378851420);
+
+
+
+
+            body {
+            #landing a.blog-feed {
+                background-image:
+                url(http://openhatch.org/static/images/base/landing/feed-icon-16x16-sprited.png) }
+            .person {
+                font-size: 80%; }
+            .geocode {
+                font-size: 80%; }
+            body#profile #importer {
+                background-image:
+                url(http://openhatch.org/static/images/ship.png) }
+            body#profile #progressbar.working .ui-progressbar-value {
+                background-image:
+                url(http://openhatch.org/static/css/jquery-ui-lightness/images/pbar-ani.gif); }
+            body#profile .portfolio_entry > .actions li.save_and_publish_button *,
+            body#profile .portfolio_entry > .actions li.save_button * {
+                background-image:
+                url(http://openhatch.org/static/images/icons/publish.png); }
+            body#profile .portfolio_entry > .actions li.delete_portfolio_entry a {
+                background-image:
+                url(http://openhatch.org/static/images/icons/delete.png); }
+            body#profile .citations li .actions a.delete_citation {
+                background-image:
+                url(http://openhatch.org/static/images/icons/delete-citation.png); }
+            body#profile #portfolio.viewer .portfolio_entry .submodule {
+                background-image:
+                url(http://openhatch.org/static/images/profile/portfolio/portfolio-entry-bg.png) }
+            body#project #wannahelp-button {
+                background-image:
+                url(http://openhatch.org/static/images/wannahelp-button-bg.png); }
+            body#project #wannahelp-button:active {
+                background-image:
+                url(http://openhatch.org/static/images/wannahelp-button-bg-active.png); }
+            body#project #wannahelp-button:hover,
+            body#project #wannahelp-button:focus {
+                background-image:
+                url(http://openhatch.org/static/images/wannahelp-button-bg-hover.png); }
+            body#project #wannahelp-button:hover:active {
+                background-image:
+                url(http://openhatch.org/static/images/wannahelp-button-bg-hover-active.png); }
+            body#project .next_steps_for_helpers {
+                background-image:
+                url(http://openhatch.org/static/images/bg-translucent-green.png); }
+            #footer { background: #333 url('http://openhatch.org/static/images/dark-hatch.png') repeat; }
+
+
+            /*]]>*/
+        </style>
+
+        <!--[if lt IE 8]>
+        <script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js"
+        type="text/javascript"></script>
+        <![endif]-->
+
+		<script type="text/javascript" src="http://openhatch.org/static/packed/header.js?1338418168"></script>
+
+
+        <link rel="stylesheet/less" type="text/css" href="base.less">
+        <link rel="stylesheet/less" type="text/css" href="http://openhatch.org/static/less/base/one_column.less">
+        <link rel="stylesheet/less" type="text/css" href="http://openhatch.org/static/less/base/two_column.less">
+        <link rel="stylesheet/less" type="text/css" href="http://openhatch.org/static/less/base/three_column.less">
+        <link rel="stylesheet/less" type="text/css" href="http://openhatch.org/static/less/base/landing.less">
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="http://openhatch.org/static/js/less-1.3.0.min.js" type="text/javascript"></script><style type="text/css" media="screen" id="less:static-less-base-base">/* fonts */
+@font-face {
+  font-family: Tuffy;
+  src: url('https://openhatch.org/static/fonts/tuffy_regular.ttf');
+}
+@font-face {
+  font-family: Tuffy;
+  font-weight: bold;
+  src: url('https://openhatch.org/static/fonts/tuffy_bold.ttf');
+}
+@font-face {
+  font-family: Tuffy;
+  font-style: italic;
+  src: url('https://openhatch.org/static/fonts/tuffy_italic.ttf');
+}
+@font-face {
+  font-family: Tuffy;
+  font-weight: bold;
+  font-style: italic;
+  src: url('https://openhatch.org/static/fonts/tuffy_bold_italic.ttf');
+}
+/* coloration */
+.nav-bg {
+  background: #333333 url('http://openhatch.org/static/images/dark-hatch.png') repeat;
+  box-shadow: 0 0 7px #333333;
+  -moz-box-shadow: 0 0 7px #333333;
+  -webkit-box-shadow: 0 0 7px #333333;
+}
+/* size, width and padding stuff */
+/* CSSTODO -- do we use these actually?*/
+.enormous {
+  font-size: 3em;
+}
+.fairly-big {
+  font-size: 1.7em;
+}
+.enormous > div {
+  margin-bottom: 1em;
+}
+.normal-size {
+  font-size: 11pt;
+}
+/* other useful mixins */
+.screw-you-webkit {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+.centered {
+  margin: 0 auto;
+}
+/* styles */
+body {
+  font: 11pt Tuffy, Helvetica, sans-serif;
+  background: #f8f8f8 url('http://openhatch.org/static/images/light-hatch.png') repeat;
+  color: #222222;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+code {
+  overflow-x: auto;
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+}
+.link_like,
+a,
+body .ui-widget-content a {
+  color: #ff6d3d;
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* IE7 */
+/* deprecated; to remove in favor of .clearfix */
+.clearer {
+  width: 100%;
+  clear: both;
+  float: none;
+}
+/* for Firefox */
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0px;
+}
+/* for IE8 */
+input[type="submit"]:focus,
+input[type="button"]:focus {
+  outline: none;
+}
+.alt-text {
+  left: -9999px;
+  position: absolute;
+}
+/* ^^^ display: none would hide this from screenreaders. Let's hide this off stage left instead. */
+.hidden {
+  display: none;
+}
+a:hover,
+.ui-widget-content a:hover {
+  text-decoration: underline;
+}
+a img {
+  border-style: none;
+}
+abbr {
+  border-bottom: 1px dotted #999;
+}
+abbr.foss {
+  border: 0;
+  font-variant: small-caps;
+}
+h1 a,
+h1 a:hover {
+  text-decoration: none;
+}
+#container {
+  width: 1000px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+.module {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: 3px solid rgba(100, 200, 255, 0.3);
+  background: rgba(255, 255, 255, 0.6);
+  float: left;
+}
+.module .module-head {
+  background: rgba(100, 200, 255, 0.3);
+  padding: 2px 20px;
+}
+.module .module-head ul li a {
+  float: right;
+  padding-top: 5px;
+}
+.module .module-head h3 {
+  text-shadow: 0 1px 0 #fff;
+  float: none;
+  padding: 4px 10px 7px 0;
+  font-size: 1.2em;
+}
+.module .module-body {
+  clear: both;
+  padding: 10px 20px 20px 20px;
+}
+.module .module-foot {
+  padding: 2px 20px 5px 20px;
+  text-align: right;
+}
+.module .module-foot .module-foot-left {
+  float: left;
+}
+.submodule-container {
+  float: none;
+  clear: both;
+  width: 100%;
+  margin: 0 auto;
+}
+.submodule {
+  background-color: #ffffff;
+  margin: 0 10px 20px 0;
+  padding: 8px 10px;
+  border: 2px dashed #e4e4e4;
+  float: left;
+}
+.submodule .submodule-head {
+  margin-bottom: 5px;
+}
+.submodule .submodule-body {
+  clear: both;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  clear: both;
+}
+h1 {
+  font-weight: normal;
+  font-size: 23pt;
+}
+#nav-container {
+  width: 100%;
+  height: 67px;
+  background: #333333 url('http://openhatch.org/static/images/dark-hatch.png') repeat;
+  box-shadow: 0 0 7px #333333;
+  -moz-box-shadow: 0 0 7px #333333;
+  -webkit-box-shadow: 0 0 7px #333333;
+}
+#nav {
+  margin: 0 auto;
+  padding-top: 3px;
+  border-top: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+#nav h1 {
+  float: left;
+}
+#nav ul {
+  list-style: none;
+  margin: 0;
+  float: right;
+}
+#nav li {
+  float: right;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+#pagetop {
+  padding: 0;
+  clear: both;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+.up-top {
+  padding: 0;
+  margin-bottom: -15px;
+}
+ul#links {
+  margin-left: 20px;
+}
+#links li {
+  display: inline;
+  font-size: 12pt;
+  margin-top: 20px;
+}
+#account-links,
+#topnavlinks {
+  float: right;
+}
+#account-links #username,
+#topnavlinks #username {
+  font-weight: bold;
+}
+#account-links li,
+#topnavlinks li {
+  margin: 15px 0;
+}
+#account-links a,
+#topnavlinks a {
+  float: left;
+  padding: 5px 10px;
+  color: white;
+}
+#topnavlinks {
+  float: left;
+}
+#topnavlinks li {
+  font-size: 1.1em;
+}
+#content {
+  padding: 10px 0 30px 0;
+  clear: both;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+#footer-wrapper {
+  width: 100%;
+  clear: both;
+  padding-top: 40px;
+}
+#footer {
+  width: 100%;
+  bottom: 0;
+  padding: 10px 0px;
+  text-align: right;
+  margin: 0 auto;
+  background: #333333 url('http://openhatch.org/static/images/dark-hatch.png') repeat;
+  box-shadow: 0 0 7px #333333;
+  -moz-box-shadow: 0 0 7px #333333;
+  -webkit-box-shadow: 0 0 7px #333333;
+}
+#footer ul {
+  display: inline;
+  list-style-type: none;
+  max-width: 108em;
+  padding: 0 20px;
+}
+#footer li {
+  display: block;
+  text-align: left;
+  padding-left: 0;
+  margin-bottom: 0.3em;
+}
+#footer a {
+  color: #ffffff;
+}
+#footer h3 {
+  color: #ddd;
+  font-size: 1em;
+  margin-bottom: 0.8em;
+}
+#footer .threecol {
+  width: 960px;
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: left;
+}
+#footer .column {
+  width: 210px;
+  display: inline-block;
+  margin: 0px 5px;
+  vertical-align: top;
+  text-align: left;
+  float: none;
+}
+h3 {
+  margin-bottom: 0px;
+  text-align: left;
+  clear: left;
+  font-weight: normal;
+  font-size: 1.1em;
+  color: #222222;
+  letter-spacing: 0;
+  margin: 0;
+}
+h3.nofloat {
+  float: none;
+}
+img.show-more-link {
+  float: right;
+  position: relative;
+  top: 1px;
+}
+input[type='text'],
+input[type='password'],
+input[type='file'],
+textarea {
+  padding: 5px;
+  font-size: 11pt;
+  float: left;
+}
+input[type='submit'] {
+  padding: 1px 8px;
+  color: #222222;
+  font-weight: bold;
+  float: left;
+}
+.alert {
+  padding: 15px 0;
+}
+.alert div {
+  background-color: #ffa;
+  color: #444;
+  padding: 8px 15px;
+  width: 700px;
+  font-size: 11pt;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+img {
+  border: 0;
+}
+img.left {
+  float: left;
+  padding: 0 10px 20px 0;
+}
+img.right {
+  float: right;
+  padding: 0 0 20px 10px;
+}
+.usernames {
+  font-size: 10pt;
+}
+#info .tag-type {
+  font-weight: normal;
+  display: block;
+  font-size: 8pt;
+}
+.column {
+  float: left;
+  margin-right: 10px;
+}
+h4,
+.cute-header {
+  font-size: 9pt;
+  color: #666666;
+  float: left;
+  margin: 0;
+  padding: 1px;
+}
+input[type='submit'] {
+  color: #333333;
+  float: right;
+}
+#notifications {
+  text-align: center;
+  float: left;
+}
+.notification {
+  float: left;
+  width: 95%;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 10px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.errorlist ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.errorlist li {
+  float: left;
+  padding: 5px 10px;
+  width: 410px;
+  color: #522;
+  background-color: #ffe4e4;
+  margin: 10px 0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+#normal_login_form li {
+  list-style: none;
+}
+dt {
+  font-size: 120%;
+}
+dd {
+  margin-top: .5em;
+  margin-left: 1.2em;
+}
+#greeting {
+  background-color: #ffffc8;
+  background-color: rgba(255, 255, 200, 0.5);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  padding: 2%;
+  width: 96%;
+  margin-top: 10px;
+  border: 4px solid #fff;
+  float: left;
+}
+#greeting #about-openhatch {
+  font-size: 140%;
+  float: left;
+  width: 100%;
+  margin-right: 20px;
+}
+#greeting #invitation {
+  font-size: 120%;
+  margin-top: 10px;
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+#greeting #next-steps {
+  float: left;
+  width: 100%;
+}
+#greeting #next-steps li {
+  font-size: 120%;
+  float: left;
+  width: 210px;
+  margin: 10px 20px 0 0;
+}
+#error #content {
+  padding: 0 300px;
+}
+#error #content .module {
+  width: 400px;
+}
+#error #content .module .head {
+  width: 96%;
+  color: #aaa;
+  padding: 2%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 96pt;
+}
+#error #content .module .body {
+  width: 90%;
+}
+.head .note {
+  float: right;
+  color: #777;
+  font-size: .9em;
+  padding: 6px;
+}
+.head .more {
+  float: right;
+  padding: 3px;
+}
+body ul.raquo_bullets {
+  margin-left: 0;
+  padding-left: 1.1em;
+  text-indent: -1em;
+  list-style: none;
+}
+body ul.raquo_bullets li {
+  margin-bottom: .4em;
+}
+body ul.raquo_bullets li:last-child {
+  margin-bottom: 0;
+}
+body ul.raquo_bullets li:before {
+  color: #999;
+  font-family: Georgia;
+  margin-right: 2px;
+  font-weight: bold;
+  content: "\00BB \0020";
+}
+.contact_us {
+  display: inline-block;
+  text-align: center;
+}
+/* CSSTODO */
+body#login .post_login_action_explanation {
+  color: #444;
+  font-size: 1.5em;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  text-align: center;
+  float: left;
+  width: 98%;
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #faffaa;
+}
+ol > li {
+  margin: 15px 0;
+}
+/* CSSTODO I think this is just missions*/
+input[rel='hint'].blur {
+  color: #777;
+}
+/* CSSTODO */
+body#people-map #search_engine_is_down_message {
+  float: left;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0;
+  font-size: 1.3em;
+}
+.ajax-loader-circle-txt-medium {
+  display: inline-block;
+  line-height: 32px;
+  padding-left: 32px;
+  background: url('http://openhatch.org/static/images/throbber.gif') no-repeat left;
+  font-weight: bold;
+  color: #444444;
+}
+/* Stuff for jQuery UI Tabs */
+/* CSSTODO */
+.ui-tabs-hide {
+  display: none !important;
+}
+.tab_nav .ui-state-active {
+  font-weight: bold;
+}
+/* Stuff initially for the events page */
+/* CSSTODO */
+.module .left-image {
+  width: 180px;
+  height: 180px;
+  float: left;
+  margin-right: 10px;
+}
+.module .name-of-event {
+  font-size: 180%;
+  margin-bottom: 1em;
+}
+.module .rest-of-box {
+  margin: 15px;
+}
+.module .little-read-more {
+  width: 100px;
+  float: right;
+}
+.module .link-without-style {
+  color: inherit;
+}
+</style><style type="text/css" media="screen" id="less:static-less-base-one_column">/* fonts */
+@font-face {
+  font-family: Tuffy;
+  src: url('http://openhatch.org/static/fonts/tuffy_regular.ttf');
+}
+@font-face {
+  font-family: Tuffy;
+  font-weight: bold;
+  src: url('http://openhatch.org/static/fonts/tuffy_bold.ttf');
+}
+@font-face {
+  font-family: Tuffy;
+  font-style: italic;
+  src: url('http://openhatch.org/static/fonts/tuffy_italic.ttf');
+}
+@font-face {
+  font-family: Tuffy;
+  font-weight: bold;
+  font-style: italic;
+  src: url('http://openhatch.org/static/fonts/tuffy_bold_italic.ttf');
+}
+/* coloration */
+.nav-bg {
+  background: #333333 url('http://openhatch.org/static/images/dark-hatch.png') repeat;
+  box-shadow: 0 0 7px #333333;
+  -moz-box-shadow: 0 0 7px #333333;
+  -webkit-box-shadow: 0 0 7px #333333;
+}
+/* size, width and padding stuff */
+/* CSSTODO -- do we use these actually?*/
+.enormous {
+  font-size: 3em;
+}
+.fairly-big {
+  font-size: 1.7em;
+}
+.enormous > div {
+  margin-bottom: 1em;
+}
+.normal-size {
+  font-size: 11pt;
+}
+/* other useful mixins */
+.screw-you-webkit {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+.centered {
+  margin: 0 auto;
+}
+/* styles */
+body {
+  font: 11pt Tuffy, Helvetica, sans-serif;
+  background: #f8f8f8 url('http://openhatch.org/static/images/light-hatch.png') repeat;
+  color: #222222;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+.link_like,
+a,
+body .ui-widget-content a {
+  color: #ff6d3d;
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* IE7 */
+/* deprecated; to remove in favor of .clearfix */
+.clearer {
+  width: 100%;
+  clear: both;
+  float: none;
+}
+/* for Firefox */
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0px;
+}
+/* for IE8 */
+input[type="submit"]:focus,
+input[type="button"]:focus {
+  outline: none;
+}
+.alt-text {
+  left: -9999px;
+  position: absolute;
+}
+/* ^^^ display: none would hide this from screenreaders. Let's hide this off stage left instead. */
+.hidden {
+  display: none;
+}
+a:hover,
+.ui-widget-content a:hover {
+  text-decoration: underline;
+}
+a img {
+  border-style: none;
+}
+abbr {
+  border-bottom: 1px dotted #999;
+}
+abbr.foss {
+  border: 0;
+  font-variant: small-caps;
+}
+h1 a,
+h1 a:hover {
+  text-decoration: none;
+}
+#container {
+  width: 1000px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+.module {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: 3px solid rgba(100, 200, 255, 0.3);
+  background: rgba(255, 255, 255, 0.6);
+  float: left;
+}
+.module .module-head {
+  background: rgba(100, 200, 255, 0.3);
+  padding: 2px 20px;
+}
+.module .module-head ul li a {
+  float: right;
+  padding-top: 5px;
+}
+.module .module-head h3 {
+  text-shadow: 0 1px 0 #fff;
+  float: none;
+  padding: 4px 10px 7px 0;
+  font-size: 1.2em;
+}
+.module .module-body {
+  clear: both;
+  padding: 10px 20px 20px 20px;
+}
+.module .module-foot {
+  padding: 2px 20px 5px 20px;
+  text-align: right;
+}
+.module .module-foot .module-foot-left {
+  float: left;
+}
+.submodule-container {
+  float: none;
+  clear: both;
+  width: 100%;
+  margin: 0 auto;
+}
+.submodule {
+  background-color: #ffffff;
+  margin: 0 10px 20px 0;
+  padding: 8px 10px;
+  border: 2px dashed #e4e4e4;
+  float: left;
+}
+.submodule .submodule-head {
+  margin-bottom: 5px;
+}
+.submodule .submodule-body {
+  clear: both;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  clear: both;
+}
+h1 {
+  font-weight: normal;
+  font-size: 23pt;
+}
+#nav-container {
+  width: 100%;
+  height: 67px;
+  background: #333333 url('http://openhatch.org/static/images/dark-hatch.png') repeat;
+  box-shadow: 0 0 7px #333333;
+  -moz-box-shadow: 0 0 7px #333333;
+  -webkit-box-shadow: 0 0 7px #333333;
+}
+#nav {
+  margin: 0 auto;
+  padding-top: 3px;
+  border-top: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+#nav h1 {
+  float: left;
+}
+#nav ul {
+  list-style: none;
+  margin: 0;
+  float: right;
+}
+#nav li {
+  float: right;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+#pagetop {
+  padding: 0;
+  clear: both;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+.up-top {
+  padding: 0;
+  margin-bottom: -15px;
+}
+ul#links {
+  margin-left: 20px;
+}
+#links li {
+  display: inline;
+  font-size: 12pt;
+  margin-top: 20px;
+}
+#account-links,
+#topnavlinks {
+  float: right;
+}
+#account-links #username,
+#topnavlinks #username {
+  font-weight: bold;
+}
+#account-links li,
+#topnavlinks li {
+  margin: 15px 0;
+}
+#account-links a,
+#topnavlinks a {
+  float: left;
+  padding: 5px 10px;
+  color: white;
+}
+#topnavlinks {
+  float: left;
+}
+#topnavlinks li {
+  font-size: 1.1em;
+}
+#content {
+  padding: 10px 0 30px 0;
+  clear: both;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+#footer-wrapper {
+  width: 100%;
+  clear: both;
+  padding-top: 40px;
+}
+#footer {
+  width: 100%;
+  bottom: 0;
+  padding: 10px 0px;
+  text-align: right;
+  margin: 0 auto;
+  background: #333333 url('http://openhatch.org/static/images/dark-hatch.png') repeat;
+  box-shadow: 0 0 7px #333333;
+  -moz-box-shadow: 0 0 7px #333333;
+  -webkit-box-shadow: 0 0 7px #333333;
+}
+#footer ul {
+  display: inline;
+  list-style-type: none;
+  max-width: 108em;
+  padding: 0 20px;
+}
+#footer li {
+  display: block;
+  text-align: left;
+  padding-left: 0;
+  margin-bottom: 0.3em;
+}
+#footer a {
+  color: #ffffff;
+}
+#footer h3 {
+  color: #ddd;
+  font-size: 1em;
+  margin-bottom: 0.8em;
+}
+#footer .threecol {
+  width: 960px;
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: left;
+}
+#footer .column {
+  width: 210px;
+  display: inline-block;
+  margin: 0px 5px;
+  vertical-align: top;
+  text-align: left;
+  float: none;
+}
+h3 {
+  margin-bottom: 0px;
+  text-align: left;
+  clear: left;
+  font-weight: normal;
+  font-size: 1.1em;
+  color: #222222;
+  letter-spacing: 0;
+  margin: 0;
+}
+h3.nofloat {
+  float: none;
+}
+img.show-more-link {
+  float: right;
+  position: relative;
+  top: 1px;
+}
+input[type='text'],
+input[type='password'],
+input[type='file'],
+textarea {
+  padding: 5px;
+  font-size: 11pt;
+  float: left;
+}
+input[type='submit'] {
+  padding: 1px 8px;
+  color: #222222;
+  font-weight: bold;
+  float: left;
+}
+.alert {
+  padding: 15px 0;
+}
+.alert div {
+  background-color: #ffa;
+  color: #444;
+  padding: 8px 15px;
+  width: 700px;
+  font-size: 11pt;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+img {
+  border: 0;
+}
+img.left {
+  float: left;
+  padding: 0 10px 20px 0;
+}
+img.right {
+  float: right;
+  padding: 0 0 20px 10px;
+}
+.usernames {
+  font-size: 10pt;
+}
+#info .tag-type {
+  font-weight: normal;
+  display: block;
+  font-size: 8pt;
+}
+.column {
+  float: left;
+  margin-right: 10px;
+}
+h4,
+.cute-header {
+  font-size: 9pt;
+  color: #666666;
+  float: left;
+  margin: 0;
+  padding: 1px;
+}
+input[type='submit'] {
+  color: #333333;
+  float: right;
+}
+#notifications {
+  text-align: center;
+  float: left;
+}
+.notification {
+  float: left;
+  width: 95%;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 10px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.errorlist ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.errorlist li {
+  float: left;
+  padding: 5px 10px;
+  width: 410px;
+  color: #522;
+  background-color: #ffe4e4;
+  margin: 10px 0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+#normal_login_form li {
+  list-style: none;
+}
+dt {
+  font-size: 120%;
+}
+dd {
+  margin-top: .5em;
+  margin-left: 1.2em;
+}
+#greeting {
+  background-color: #ffffc8;
+  background-color: rgba(255, 255, 200, 0.5);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  padding: 2%;
+  width: 96%;
+  margin-top: 10px;
+  border: 4px solid #fff;
+  float: left;
+}
+#greeting #about-openhatch {
+  font-size: 140%;
+  float: left;
+  width: 100%;
+  margin-right: 20px;
+}
+#greeting #invitation {
+  font-size: 120%;
+  margin-top: 10px;
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+#greeting #next-steps {
+  float: left;
+  width: 100%;
+}
+#greeting #next-steps li {
+  font-size: 120%;
+  float: left;
+  width: 210px;
+  margin: 10px 20px 0 0;
+}
+#error #content {
+  padding: 0 300px;
+}
+#error #content .module {
+  width: 400px;
+}
+#error #content .module .head {
+  width: 96%;
+  color: #aaa;
+  padding: 2%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 96pt;
+}
+#error #content .module .body {
+  width: 90%;
+}
+.head .note {
+  float: right;
+  color: #777;
+  font-size: .9em;
+  padding: 6px;
+}
+.head .more {
+  float: right;
+  padding: 3px;
+}
+body ul.raquo_bullets {
+  margin-left: 0;
+  padding-left: .6em;
+  text-indent: -1em;
+  list-style: none;
+}
+body ul.raquo_bullets li {
+  margin-bottom: .4em;
+}
+body ul.raquo_bullets li:last-child {
+  margin-bottom: 0;
+}
+body ul.raquo_bullets li:before {
+  color: #999;
+  font-family: Georgia;
+  margin-right: 2px;
+  font-weight: bold;
+  content: "\00BB \0020";
+}
+/* CSSTODO */
+body#login .post_login_action_explanation {
+  color: #444;
+  font-size: 1.5em;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  text-align: center;
+  float: left;
+  width: 98%;
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #faffaa;
+}
+ol > li {
+  margin: 15px 0;
+}
+/* CSSTODO I think this is just missions*/
+input[rel='hint'].blur {
+  color: #777;
+}
+/* CSSTODO */
+body#people-map #search_engine_is_down_message {
+  float: left;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0;
+  font-size: 1.3em;
+}
+.ajax-loader-circle-txt-medium {
+  display: inline-block;
+  line-height: 32px;
+  padding-left: 32px;
+  background: url('http://openhatch.org/static/images/throbber.gif') no-repeat left;
+  font-weight: bold;
+  color: #444444;
+}
+/* Stuff for jQuery UI Tabs */
+/* CSSTODO */
+.ui-tabs-hide {
+  display: none !important;
+}
+.tab_nav .ui-state-active {
+  font-weight: bold;
+}
+/* Stuff initially for the events page */
+/* CSSTODO */
+.module .left-image {
+  width: 180px;
+  height: 180px;
+  float: left;
+  margin-right: 10px;
+}
+.module .name-of-event {
+  font-size: 180%;
+  margin-bottom: 1em;
+}
+.module .rest-of-box {
+  margin: 15px;
+}
+.module .little-read-more {
+  width: 100px;
+  float: right;
+}
+.module .link-without-style {
+  color: inherit;
+}
+/* CSSTODO
+   One day, we'll probably want to review this and clean it up. */
+body.one_column #main {
+  float: none;
+  /* SKINNY SUBMODULE */
+
+  /* FAT SUBMODULE */
+
+}
+body.one_column #main .submodule .head h3 {
+  font-weight: normal;
+  font-size: 11pt;
+}
+body.one_column #main .submodule .body,
+body.one_column #main #main .submodule .foot {
+  padding: 3% 5%;
+  float: left;
+}
+body.one_column #main .submodule.skinny {
+  width: 25%;
+  margin-right: 20px;
+}
+body.one_column #main .submodule.skinny .submodule-head {
+  width: 82.5%;
+}
+body.one_column #main .submodule.skinny .submodule-head h3 {
+  width: 95%;
+}
+body.one_column #main .submodule.skinny .submodule-body {
+  width: 90%;
+}
+body.one_column #main .submodule.fat {
+  width: 67%;
+}
+body.one_column #main .submodule.fat .submodule-head {
+  width: 93.8%;
+}
+body.one_column #main .submodule.fat .submodule-head h3 {
+  width: 100%;
+}
+body.one_column #main .submodule.fat .submodule-body {
+  width: 90%;
+}
+body.one_column #main .submodule.fat .submodule-foot {
+  width: 90%;
+}
+body.one_column #main .equal-width {
+  width: 45%;
+}
+body.one_column #main .equal-width .submodule {
+  width: 45%;
+}
+body.one_column #main .equal-width .submodule submodule-head,
+body.one_column #main .equal-width .submodule .submodule-body,
+body.one_column #main .equal-width .submodule .submodule-foot {
+  width: 90.5%;
+}
+body.one_column #main .submodule.left {
+  margin-right: 20px;
+}
+</style><style type="text/css" media="screen" id="less:static-less-base-two_column">/* fonts */
+@font-face {
+  font-family: Tuffy;
+  src: url('http://openhatch.org/static/fonts/tuffy_regular.ttf');
+}
+@font-face {
+  font-family: Tuffy;
+  font-weight: bold;
+  src: url('http://openhatch.org/static/fonts/tuffy_bold.ttf');
+}
+@font-face {
+  font-family: Tuffy;
+  font-style: italic;
+  src: url('http://openhatch.org/static/fonts/tuffy_italic.ttf');
+}
+@font-face {
+  font-family: Tuffy;
+  font-weight: bold;
+  font-style: italic;
+  src: url('http://openhatch.org/static/fonts/tuffy_bold_italic.ttf');
+}
+/* coloration */
+.nav-bg {
+  background: #333333 url('http://openhatch.org/static/images/dark-hatch.png') repeat;
+  box-shadow: 0 0 7px #333333;
+  -moz-box-shadow: 0 0 7px #333333;
+  -webkit-box-shadow: 0 0 7px #333333;
+}
+/* size, width and padding stuff */
+/* CSSTODO -- do we use these actually?*/
+.enormous {
+  font-size: 3em;
+}
+.fairly-big {
+  font-size: 1.7em;
+}
+.enormous > div {
+  margin-bottom: 1em;
+}
+.normal-size {
+  font-size: 11pt;
+}
+/* other useful mixins */
+.screw-you-webkit {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+.centered {
+  margin: 0 auto;
+}
+/* styles */
+body {
+  font: 11pt Tuffy, Helvetica, sans-serif;
+  background: #f8f8f8 url('http://openhatch.org/static/images/light-hatch.png') repeat;
+  color: #222222;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+.link_like,
+a,
+body .ui-widget-content a {
+  color: #ff6d3d;
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* IE7 */
+/* deprecated; to remove in favor of .clearfix */
+.clearer {
+  width: 100%;
+  clear: both;
+  float: none;
+}
+/* for Firefox */
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0px;
+}
+/* for IE8 */
+input[type="submit"]:focus,
+input[type="button"]:focus {
+  outline: none;
+}
+.alt-text {
+  left: -9999px;
+  position: absolute;
+}
+/* ^^^ display: none would hide this from screenreaders. Let's hide this off stage left instead. */
+.hidden {
+  display: none;
+}
+a:hover,
+.ui-widget-content a:hover {
+  text-decoration: underline;
+}
+a img {
+  border-style: none;
+}
+abbr {
+  border-bottom: 1px dotted #999;
+}
+abbr.foss {
+  border: 0;
+  font-variant: small-caps;
+}
+h1 a,
+h1 a:hover {
+  text-decoration: none;
+}
+#container {
+  width: 1000px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+.module {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: 3px solid rgba(100, 200, 255, 0.3);
+  background: rgba(255, 255, 255, 0.6);
+  float: left;
+}
+.module .module-head {
+  background: rgba(100, 200, 255, 0.3);
+  padding: 2px 20px;
+}
+.module .module-head ul li a {
+  float: right;
+  padding-top: 5px;
+}
+.module .module-head h3 {
+  text-shadow: 0 1px 0 #fff;
+  float: none;
+  padding: 4px 10px 7px 0;
+  font-size: 1.2em;
+}
+.module .module-body {
+  clear: both;
+  padding: 10px 20px 20px 20px;
+}
+.module .module-foot {
+  padding: 2px 20px 5px 20px;
+  text-align: right;
+}
+.module .module-foot .module-foot-left {
+  float: left;
+}
+.submodule-container {
+  float: none;
+  clear: both;
+  width: 100%;
+  margin: 0 auto;
+}
+.submodule {
+  background-color: #ffffff;
+  margin: 0 10px 20px 0;
+  padding: 8px 10px;
+  border: 2px dashed #e4e4e4;
+  float: left;
+}
+.submodule .submodule-head {
+  margin-bottom: 5px;
+}
+.submodule .submodule-body {
+  clear: both;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  clear: both;
+}
+h1 {
+  font-weight: normal;
+  font-size: 23pt;
+}
+#nav-container {
+  width: 100%;
+  height: 67px;
+  background: #333333 url('http://openhatch.org/static/images/dark-hatch.png') repeat;
+  box-shadow: 0 0 7px #333333;
+  -moz-box-shadow: 0 0 7px #333333;
+  -webkit-box-shadow: 0 0 7px #333333;
+}
+#nav {
+  margin: 0 auto;
+  padding-top: 3px;
+  border-top: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+#nav h1 {
+  float: left;
+}
+#nav ul {
+  list-style: none;
+  margin: 0;
+  float: right;
+}
+#nav li {
+  float: right;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+#pagetop {
+  padding: 0;
+  clear: both;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+.up-top {
+  padding: 0;
+  margin-bottom: -15px;
+}
+ul#links {
+  margin-left: 20px;
+}
+#links li {
+  display: inline;
+  font-size: 12pt;
+  margin-top: 20px;
+}
+#account-links,
+#topnavlinks {
+  float: right;
+}
+#account-links #username,
+#topnavlinks #username {
+  font-weight: bold;
+}
+#account-links li,
+#topnavlinks li {
+  margin: 15px 0;
+}
+#account-links a,
+#topnavlinks a {
+  float: left;
+  padding: 5px 10px;
+  color: white;
+}
+#topnavlinks {
+  float: left;
+}
+#topnavlinks li {
+  font-size: 1.1em;
+}
+#content {
+  padding: 10px 0 30px 0;
+  clear: both;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+#footer-wrapper {
+  width: 100%;
+  clear: both;
+  padding-top: 40px;
+}
+#footer {
+  width: 100%;
+  bottom: 0;
+  padding: 10px 0px;
+  text-align: right;
+  margin: 0 auto;
+  background: #333333 url('http://openhatch.org/static/images/dark-hatch.png') repeat;
+  box-shadow: 0 0 7px #333333;
+  -moz-box-shadow: 0 0 7px #333333;
+  -webkit-box-shadow: 0 0 7px #333333;
+}
+#footer ul {
+  display: inline;
+  list-style-type: none;
+  max-width: 108em;
+  padding: 0 20px;
+}
+#footer li {
+  display: block;
+  text-align: left;
+  padding-left: 0;
+  margin-bottom: 0.3em;
+}
+#footer a {
+  color: #ffffff;
+}
+#footer h3 {
+  color: #ddd;
+  font-size: 1em;
+  margin-bottom: 0.8em;
+}
+#footer .threecol {
+  width: 960px;
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: left;
+}
+#footer .column {
+  width: 210px;
+  display: inline-block;
+  margin: 0px 5px;
+  vertical-align: top;
+  text-align: left;
+  float: none;
+}
+h3 {
+  margin-bottom: 0px;
+  text-align: left;
+  clear: left;
+  font-weight: normal;
+  font-size: 1.1em;
+  color: #222222;
+  letter-spacing: 0;
+  margin: 0;
+}
+h3.nofloat {
+  float: none;
+}
+img.show-more-link {
+  float: right;
+  position: relative;
+  top: 1px;
+}
+input[type='text'],
+input[type='password'],
+input[type='file'],
+textarea {
+  padding: 5px;
+  font-size: 11pt;
+  float: left;
+}
+input[type='submit'] {
+  padding: 1px 8px;
+  color: #222222;
+  font-weight: bold;
+  float: left;
+}
+.alert {
+  padding: 15px 0;
+}
+.alert div {
+  background-color: #ffa;
+  color: #444;
+  padding: 8px 15px;
+  width: 700px;
+  font-size: 11pt;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+img {
+  border: 0;
+}
+img.left {
+  float: left;
+  padding: 0 10px 20px 0;
+}
+img.right {
+  float: right;
+  padding: 0 0 20px 10px;
+}
+.usernames {
+  font-size: 10pt;
+}
+#info .tag-type {
+  font-weight: normal;
+  display: block;
+  font-size: 8pt;
+}
+.column {
+  float: left;
+  margin-right: 10px;
+}
+h4,
+.cute-header {
+  font-size: 9pt;
+  color: #666666;
+  float: left;
+  margin: 0;
+  padding: 1px;
+}
+input[type='submit'] {
+  color: #333333;
+  float: right;
+}
+#notifications {
+  text-align: center;
+  float: left;
+}
+.notification {
+  float: left;
+  width: 95%;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 10px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.errorlist ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.errorlist li {
+  float: left;
+  padding: 5px 10px;
+  width: 410px;
+  color: #522;
+  background-color: #ffe4e4;
+  margin: 10px 0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+#normal_login_form li {
+  list-style: none;
+}
+dt {
+  font-size: 120%;
+}
+dd {
+  margin-top: .5em;
+  margin-left: 1.2em;
+}
+#greeting {
+  background-color: #ffffc8;
+  background-color: rgba(255, 255, 200, 0.5);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  padding: 2%;
+  width: 96%;
+  margin-top: 10px;
+  border: 4px solid #fff;
+  float: left;
+}
+#greeting #about-openhatch {
+  font-size: 140%;
+  float: left;
+  width: 100%;
+  margin-right: 20px;
+}
+#greeting #invitation {
+  font-size: 120%;
+  margin-top: 10px;
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+#greeting #next-steps {
+  float: left;
+  width: 100%;
+}
+#greeting #next-steps li {
+  font-size: 120%;
+  float: left;
+  width: 210px;
+  margin: 10px 20px 0 0;
+}
+#error #content {
+  padding: 0 300px;
+}
+#error #content .module {
+  width: 400px;
+}
+#error #content .module .head {
+  width: 96%;
+  color: #aaa;
+  padding: 2%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 96pt;
+}
+#error #content .module .body {
+  width: 90%;
+}
+.head .note {
+  float: right;
+  color: #777;
+  font-size: .9em;
+  padding: 6px;
+}
+.head .more {
+  float: right;
+  padding: 3px;
+}
+body ul.raquo_bullets {
+  margin-left: 0;
+  padding-left: .6em;
+  text-indent: -1em;
+  list-style: none;
+}
+body ul.raquo_bullets li {
+  margin-bottom: .4em;
+}
+body ul.raquo_bullets li:last-child {
+  margin-bottom: 0;
+}
+body ul.raquo_bullets li:before {
+  color: #999;
+  font-family: Georgia;
+  margin-right: 2px;
+  font-weight: bold;
+  content: "\00BB \0020";
+}
+/* CSSTODO */
+body#login .post_login_action_explanation {
+  color: #444;
+  font-size: 1.5em;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  text-align: center;
+  float: left;
+  width: 98%;
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #faffaa;
+}
+ol > li {
+  margin: 15px 0;
+}
+/* CSSTODO I think this is just missions*/
+input[rel='hint'].blur {
+  color: #777;
+}
+/* CSSTODO */
+body#people-map #search_engine_is_down_message {
+  float: left;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0;
+  font-size: 1.3em;
+}
+.ajax-loader-circle-txt-medium {
+  display: inline-block;
+  line-height: 32px;
+  padding-left: 32px;
+  background: url('http://openhatch.org/static/images/throbber.gif') no-repeat left;
+  font-weight: bold;
+  color: #444444;
+}
+/* Stuff for jQuery UI Tabs */
+/* CSSTODO */
+.ui-tabs-hide {
+  display: none !important;
+}
+.tab_nav .ui-state-active {
+  font-weight: bold;
+}
+/* Stuff initially for the events page */
+/* CSSTODO */
+.module .left-image {
+  width: 180px;
+  height: 180px;
+  float: left;
+  margin-right: 10px;
+}
+.module .name-of-event {
+  font-size: 180%;
+  margin-bottom: 1em;
+}
+.module .rest-of-box {
+  margin: 15px;
+}
+.module .little-read-more {
+  width: 100px;
+  float: right;
+}
+.module .link-without-style {
+  color: inherit;
+}
+.column {
+  clear: none;
+}
+.two-column-left {
+  float: left;
+  width: 300px;
+}
+.two-column-right {
+  /*    margin-left: @column-width + @padding-between-columns; */
+
+  width: 640px;
+  float: none;
+  clear: none;
+}
+#more-content {
+  clear: both;
+}
+</style><style type="text/css" media="screen" id="less:static-less-base-three_column">/* fonts */
+@font-face {
+  font-family: Tuffy;
+  src: url('http://openhatch.org/static/fonts/tuffy_regular.ttf');
+}
+@font-face {
+  font-family: Tuffy;
+  font-weight: bold;
+  src: url('http://openhatch.org/static/fonts/tuffy_bold.ttf');
+}
+@font-face {
+  font-family: Tuffy;
+  font-style: italic;
+  src: url('http://openhatch.org/static/fonts/tuffy_italic.ttf');
+}
+@font-face {
+  font-family: Tuffy;
+  font-weight: bold;
+  font-style: italic;
+  src: url('http://openhatch.org/static/fonts/tuffy_bold_italic.ttf');
+}
+/* coloration */
+.nav-bg {
+  background: #333333 url('http://openhatch.org/static/images/dark-hatch.png') repeat;
+  box-shadow: 0 0 7px #333333;
+  -moz-box-shadow: 0 0 7px #333333;
+  -webkit-box-shadow: 0 0 7px #333333;
+}
+/* size, width and padding stuff */
+/* CSSTODO -- do we use these actually?*/
+.enormous {
+  font-size: 3em;
+}
+.fairly-big {
+  font-size: 1.7em;
+}
+.enormous > div {
+  margin-bottom: 1em;
+}
+.normal-size {
+  font-size: 11pt;
+}
+/* other useful mixins */
+.screw-you-webkit {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+.centered {
+  margin: 0 auto;
+}
+/* styles */
+body {
+  font: 11pt Tuffy, Helvetica, sans-serif;
+  background: #f8f8f8 url('http://openhatch.org/static/images/light-hatch.png') repeat;
+  color: #222222;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+.link_like,
+a,
+body .ui-widget-content a {
+  color: #ff6d3d;
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* IE7 */
+/* deprecated; to remove in favor of .clearfix */
+.clearer {
+  width: 100%;
+  clear: both;
+  float: none;
+}
+/* for Firefox */
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0px;
+}
+/* for IE8 */
+input[type="submit"]:focus,
+input[type="button"]:focus {
+  outline: none;
+}
+.alt-text {
+  left: -9999px;
+  position: absolute;
+}
+/* ^^^ display: none would hide this from screenreaders. Let's hide this off stage left instead. */
+.hidden {
+  display: none;
+}
+a:hover,
+.ui-widget-content a:hover {
+  text-decoration: underline;
+}
+a img {
+  border-style: none;
+}
+abbr {
+  border-bottom: 1px dotted #999;
+}
+abbr.foss {
+  border: 0;
+  font-variant: small-caps;
+}
+h1 a,
+h1 a:hover {
+  text-decoration: none;
+}
+#container {
+  width: 1000px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+.module {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: 3px solid rgba(100, 200, 255, 0.3);
+  background: rgba(255, 255, 255, 0.6);
+  float: left;
+}
+.module .module-head {
+  background: rgba(100, 200, 255, 0.3);
+  padding: 2px 20px;
+}
+.module .module-head ul li a {
+  float: right;
+  padding-top: 5px;
+}
+.module .module-head h3 {
+  text-shadow: 0 1px 0 #fff;
+  float: none;
+  padding: 4px 10px 7px 0;
+  font-size: 1.2em;
+}
+.module .module-body {
+  clear: both;
+  padding: 10px 20px 20px 20px;
+}
+.module .module-foot {
+  padding: 2px 20px 5px 20px;
+  text-align: right;
+}
+.module .module-foot .module-foot-left {
+  float: left;
+}
+.submodule-container {
+  float: none;
+  clear: both;
+  width: 100%;
+  margin: 0 auto;
+}
+.submodule {
+  background-color: #ffffff;
+  margin: 0 10px 20px 0;
+  padding: 8px 10px;
+  border: 2px dashed #e4e4e4;
+  float: left;
+}
+.submodule .submodule-head {
+  margin-bottom: 5px;
+}
+.submodule .submodule-body {
+  clear: both;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  clear: both;
+}
+h1 {
+  font-weight: normal;
+  font-size: 23pt;
+}
+#nav-container {
+  width: 100%;
+  height: 67px;
+  background: #333333 url('http://openhatch.org/static/images/dark-hatch.png') repeat;
+  box-shadow: 0 0 7px #333333;
+  -moz-box-shadow: 0 0 7px #333333;
+  -webkit-box-shadow: 0 0 7px #333333;
+}
+#nav {
+  margin: 0 auto;
+  padding-top: 3px;
+  border-top: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+#nav h1 {
+  float: left;
+}
+#nav ul {
+  list-style: none;
+  margin: 0;
+  float: right;
+}
+#nav li {
+  float: right;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+#pagetop {
+  padding: 0;
+  clear: both;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+.up-top {
+  padding: 0;
+  margin-bottom: -15px;
+}
+ul#links {
+  margin-left: 20px;
+}
+#links li {
+  display: inline;
+  font-size: 12pt;
+  margin-top: 20px;
+}
+#account-links,
+#topnavlinks {
+  float: right;
+}
+#account-links #username,
+#topnavlinks #username {
+  font-weight: bold;
+}
+#account-links li,
+#topnavlinks li {
+  margin: 15px 0;
+}
+#account-links a,
+#topnavlinks a {
+  float: left;
+  padding: 5px 10px;
+  color: white;
+}
+#topnavlinks {
+  float: left;
+}
+#topnavlinks li {
+  font-size: 1.1em;
+}
+#content {
+  padding: 10px 0 30px 0;
+  clear: both;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+#footer-wrapper {
+  width: 100%;
+  clear: both;
+  padding-top: 40px;
+}
+#footer {
+  width: 100%;
+  bottom: 0;
+  padding: 10px 0px;
+  text-align: right;
+  margin: 0 auto;
+  background: #333333 url('http://openhatch.org/static/images/dark-hatch.png') repeat;
+  box-shadow: 0 0 7px #333333;
+  -moz-box-shadow: 0 0 7px #333333;
+  -webkit-box-shadow: 0 0 7px #333333;
+}
+#footer ul {
+  display: inline;
+  list-style-type: none;
+  max-width: 108em;
+  padding: 0 20px;
+}
+#footer li {
+  display: block;
+  text-align: left;
+  padding-left: 0;
+  margin-bottom: 0.3em;
+}
+#footer a {
+  color: #ffffff;
+}
+#footer h3 {
+  color: #ddd;
+  font-size: 1em;
+  margin-bottom: 0.8em;
+}
+#footer .threecol {
+  width: 960px;
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: left;
+}
+#footer .column {
+  width: 210px;
+  display: inline-block;
+  margin: 0px 5px;
+  vertical-align: top;
+  text-align: left;
+  float: none;
+}
+h3 {
+  margin-bottom: 0px;
+  text-align: left;
+  clear: left;
+  font-weight: normal;
+  font-size: 1.1em;
+  color: #222222;
+  letter-spacing: 0;
+  margin: 0;
+}
+h3.nofloat {
+  float: none;
+}
+img.show-more-link {
+  float: right;
+  position: relative;
+  top: 1px;
+}
+input[type='text'],
+input[type='password'],
+input[type='file'],
+textarea {
+  padding: 5px;
+  font-size: 11pt;
+  float: left;
+}
+input[type='submit'] {
+  padding: 1px 8px;
+  color: #222222;
+  font-weight: bold;
+  float: left;
+}
+.alert {
+  padding: 15px 0;
+}
+.alert div {
+  background-color: #ffa;
+  color: #444;
+  padding: 8px 15px;
+  width: 700px;
+  font-size: 11pt;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+img {
+  border: 0;
+}
+img.left {
+  float: left;
+  padding: 0 10px 20px 0;
+}
+img.right {
+  float: right;
+  padding: 0 0 20px 10px;
+}
+.usernames {
+  font-size: 10pt;
+}
+#info .tag-type {
+  font-weight: normal;
+  display: block;
+  font-size: 8pt;
+}
+.column {
+  float: left;
+  margin-right: 10px;
+}
+h4,
+.cute-header {
+  font-size: 9pt;
+  color: #666666;
+  float: left;
+  margin: 0;
+  padding: 1px;
+}
+input[type='submit'] {
+  color: #333333;
+  float: right;
+}
+#notifications {
+  text-align: center;
+  float: left;
+}
+.notification {
+  float: left;
+  width: 95%;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 10px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.errorlist ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.errorlist li {
+  float: left;
+  padding: 5px 10px;
+  width: 410px;
+  color: #522;
+  background-color: #ffe4e4;
+  margin: 10px 0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+#normal_login_form li {
+  list-style: none;
+}
+dt {
+  font-size: 120%;
+}
+dd {
+  margin-top: .5em;
+  margin-left: 1.2em;
+}
+#greeting {
+  background-color: #ffffc8;
+  background-color: rgba(255, 255, 200, 0.5);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  padding: 2%;
+  width: 96%;
+  margin-top: 10px;
+  border: 4px solid #fff;
+  float: left;
+}
+#greeting #about-openhatch {
+  font-size: 140%;
+  float: left;
+  width: 100%;
+  margin-right: 20px;
+}
+#greeting #invitation {
+  font-size: 120%;
+  margin-top: 10px;
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+#greeting #next-steps {
+  float: left;
+  width: 100%;
+}
+#greeting #next-steps li {
+  font-size: 120%;
+  float: left;
+  width: 210px;
+  margin: 10px 20px 0 0;
+}
+#error #content {
+  padding: 0 300px;
+}
+#error #content .module {
+  width: 400px;
+}
+#error #content .module .head {
+  width: 96%;
+  color: #aaa;
+  padding: 2%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 96pt;
+}
+#error #content .module .body {
+  width: 90%;
+}
+.head .note {
+  float: right;
+  color: #777;
+  font-size: .9em;
+  padding: 6px;
+}
+.head .more {
+  float: right;
+  padding: 3px;
+}
+body ul.raquo_bullets {
+  margin-left: 0;
+  padding-left: .6em;
+  text-indent: -1em;
+  list-style: none;
+}
+body ul.raquo_bullets li {
+  margin-bottom: .4em;
+}
+body ul.raquo_bullets li:last-child {
+  margin-bottom: 0;
+}
+body ul.raquo_bullets li:before {
+  color: #999;
+  font-family: Georgia;
+  margin-right: 2px;
+  font-weight: bold;
+  content: "\00BB \0020";
+}
+/* CSSTODO */
+body#login .post_login_action_explanation {
+  color: #444;
+  font-size: 1.5em;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  text-align: center;
+  float: left;
+  width: 98%;
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #faffaa;
+}
+ol > li {
+  margin: 15px 0;
+}
+/* CSSTODO I think this is just missions*/
+input[rel='hint'].blur {
+  color: #777;
+}
+/* CSSTODO */
+body#people-map #search_engine_is_down_message {
+  float: left;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0;
+  font-size: 1.3em;
+}
+.ajax-loader-circle-txt-medium {
+  display: inline-block;
+  line-height: 32px;
+  padding-left: 32px;
+  background: url('http://openhatch.org/static/images/throbber.gif') no-repeat left;
+  font-weight: bold;
+  color: #444444;
+}
+/* Stuff for jQuery UI Tabs */
+/* CSSTODO */
+.ui-tabs-hide {
+  display: none !important;
+}
+.tab_nav .ui-state-active {
+  font-weight: bold;
+}
+/* Stuff initially for the events page */
+/* CSSTODO */
+.module .left-image {
+  width: 180px;
+  height: 180px;
+  float: left;
+  margin-right: 10px;
+}
+.module .name-of-event {
+  font-size: 180%;
+  margin-bottom: 1em;
+}
+.module .rest-of-box {
+  margin: 15px;
+}
+.module .little-read-more {
+  width: 100px;
+  float: right;
+}
+.module .link-without-style {
+  color: inherit;
+}
+.three-column {
+  width: 300px;
+  margin-right: 20px;
+  float: left;
+}
+.three-column-last {
+  margin-right: 0px;
+}
+</style><style type="text/css" media="screen" id="less:static-less-base-landing">/* fonts */
+@font-face {
+  font-family: Tuffy;
+  src: url('http://openhatch.org/static/fonts/tuffy_regular.ttf');
+}
+@font-face {
+  font-family: Tuffy;
+  font-weight: bold;
+  src: url('http://openhatch.org/static/fonts/tuffy_bold.ttf');
+}
+@font-face {
+  font-family: Tuffy;
+  font-style: italic;
+  src: url('http://openhatch.org/static/fonts/tuffy_italic.ttf');
+}
+@font-face {
+  font-family: Tuffy;
+  font-weight: bold;
+  font-style: italic;
+  src: url('http://openhatch.org/static/fonts/tuffy_bold_italic.ttf');
+}
+/* coloration */
+.nav-bg {
+  background: #333333 url('http://openhatch.org/static/images/dark-hatch.png') repeat;
+  box-shadow: 0 0 7px #333333;
+  -moz-box-shadow: 0 0 7px #333333;
+  -webkit-box-shadow: 0 0 7px #333333;
+}
+/* size, width and padding stuff */
+/* CSSTODO -- do we use these actually?*/
+.enormous {
+  font-size: 3em;
+}
+.fairly-big {
+  font-size: 1.7em;
+}
+.enormous > div {
+  margin-bottom: 1em;
+}
+.normal-size {
+  font-size: 11pt;
+}
+/* other useful mixins */
+.screw-you-webkit {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+.centered {
+  margin: 0 auto;
+}
+/* styles */
+body {
+  font: 11pt Tuffy, Helvetica, sans-serif;
+  background: #f8f8f8 url('http://openhatch.org/static/images/light-hatch.png') repeat;
+  color: #222222;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+code {
+  overflow-x: auto;
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+}
+.link_like,
+a,
+body .ui-widget-content a {
+  color: #ff6d3d;
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* IE7 */
+/* deprecated; to remove in favor of .clearfix */
+.clearer {
+  width: 100%;
+  clear: both;
+  float: none;
+}
+/* for Firefox */
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0px;
+}
+/* for IE8 */
+input[type="submit"]:focus,
+input[type="button"]:focus {
+  outline: none;
+}
+.alt-text {
+  left: -9999px;
+  position: absolute;
+}
+/* ^^^ display: none would hide this from screenreaders. Let's hide this off stage left instead. */
+.hidden {
+  display: none;
+}
+a:hover,
+.ui-widget-content a:hover {
+  text-decoration: underline;
+}
+a img {
+  border-style: none;
+}
+abbr {
+  border-bottom: 1px dotted #999;
+}
+abbr.foss {
+  border: 0;
+  font-variant: small-caps;
+}
+h1 a,
+h1 a:hover {
+  text-decoration: none;
+}
+#container {
+  width: 1000px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+.module {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: 3px solid rgba(100, 200, 255, 0.3);
+  background: rgba(255, 255, 255, 0.6);
+  float: left;
+}
+.module .module-head {
+  background: rgba(100, 200, 255, 0.3);
+  padding: 2px 20px;
+}
+.module .module-head ul li a {
+  float: right;
+  padding-top: 5px;
+}
+.module .module-head h3 {
+  text-shadow: 0 1px 0 #fff;
+  float: none;
+  padding: 4px 10px 7px 0;
+  font-size: 1.2em;
+}
+.module .module-body {
+  clear: both;
+  padding: 10px 20px 20px 20px;
+}
+.module .module-foot {
+  padding: 2px 20px 5px 20px;
+  text-align: right;
+}
+.module .module-foot .module-foot-left {
+  float: left;
+}
+.submodule-container {
+  float: none;
+  clear: both;
+  width: 100%;
+  margin: 0 auto;
+}
+.submodule {
+  background-color: #ffffff;
+  margin: 0 10px 20px 0;
+  padding: 8px 10px;
+  border: 2px dashed #e4e4e4;
+  float: left;
+}
+.submodule .submodule-head {
+  margin-bottom: 5px;
+}
+.submodule .submodule-body {
+  clear: both;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  clear: both;
+}
+h1 {
+  font-weight: normal;
+  font-size: 23pt;
+}
+#nav-container {
+  width: 100%;
+  height: 67px;
+  background: #333333 url('http://openhatch.org/static/images/dark-hatch.png') repeat;
+  box-shadow: 0 0 7px #333333;
+  -moz-box-shadow: 0 0 7px #333333;
+  -webkit-box-shadow: 0 0 7px #333333;
+}
+#nav {
+  margin: 0 auto;
+  padding-top: 3px;
+  border-top: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+#nav h1 {
+  float: left;
+}
+#nav ul {
+  list-style: none;
+  margin: 0;
+  float: right;
+}
+#nav li {
+  float: right;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+#pagetop {
+  padding: 0;
+  clear: both;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+.up-top {
+  padding: 0;
+  margin-bottom: -15px;
+}
+ul#links {
+  margin-left: 20px;
+}
+#links li {
+  display: inline;
+  font-size: 12pt;
+  margin-top: 20px;
+}
+#account-links,
+#topnavlinks {
+  float: right;
+}
+#account-links #username,
+#topnavlinks #username {
+  font-weight: bold;
+}
+#account-links li,
+#topnavlinks li {
+  margin: 15px 0;
+}
+#account-links a,
+#topnavlinks a {
+  float: left;
+  padding: 5px 10px;
+  color: white;
+}
+#topnavlinks {
+  float: left;
+}
+#topnavlinks li {
+  font-size: 1.1em;
+}
+#content {
+  padding: 10px 0 30px 0;
+  clear: both;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 960px;
+}
+#footer-wrapper {
+  width: 100%;
+  clear: both;
+  padding-top: 40px;
+}
+#footer {
+  width: 100%;
+  bottom: 0;
+  padding: 10px 0px;
+  text-align: right;
+  margin: 0 auto;
+  background: #333333 url('http://openhatch.org/static/images/dark-hatch.png') repeat;
+  box-shadow: 0 0 7px #333333;
+  -moz-box-shadow: 0 0 7px #333333;
+  -webkit-box-shadow: 0 0 7px #333333;
+}
+#footer ul {
+  display: inline;
+  list-style-type: none;
+  max-width: 108em;
+  padding: 0 20px;
+}
+#footer li {
+  display: block;
+  text-align: left;
+  padding-left: 0;
+  margin-bottom: 0.3em;
+}
+#footer a {
+  color: #ffffff;
+}
+#footer h3 {
+  color: #ddd;
+  font-size: 1em;
+  margin-bottom: 0.8em;
+}
+#footer .threecol {
+  width: 960px;
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: left;
+}
+#footer .column {
+  width: 210px;
+  display: inline-block;
+  margin: 0px 5px;
+  vertical-align: top;
+  text-align: left;
+  float: none;
+}
+h3 {
+  margin-bottom: 0px;
+  text-align: left;
+  clear: left;
+  font-weight: normal;
+  font-size: 1.1em;
+  color: #222222;
+  letter-spacing: 0;
+  margin: 0;
+}
+h3.nofloat {
+  float: none;
+}
+img.show-more-link {
+  float: right;
+  position: relative;
+  top: 1px;
+}
+input[type='text'],
+input[type='password'],
+input[type='file'],
+textarea {
+  padding: 5px;
+  font-size: 11pt;
+  float: left;
+}
+input[type='submit'] {
+  padding: 1px 8px;
+  color: #222222;
+  font-weight: bold;
+  float: left;
+}
+.alert {
+  padding: 15px 0;
+}
+.alert div {
+  background-color: #ffa;
+  color: #444;
+  padding: 8px 15px;
+  width: 700px;
+  font-size: 11pt;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+img {
+  border: 0;
+}
+img.left {
+  float: left;
+  padding: 0 10px 20px 0;
+}
+img.right {
+  float: right;
+  padding: 0 0 20px 10px;
+}
+.usernames {
+  font-size: 10pt;
+}
+#info .tag-type {
+  font-weight: normal;
+  display: block;
+  font-size: 8pt;
+}
+.column {
+  float: left;
+  margin-right: 10px;
+}
+h4,
+.cute-header {
+  font-size: 9pt;
+  color: #666666;
+  float: left;
+  margin: 0;
+  padding: 1px;
+}
+input[type='submit'] {
+  color: #333333;
+  float: right;
+}
+#notifications {
+  text-align: center;
+  float: left;
+}
+.notification {
+  float: left;
+  width: 95%;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 10px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.errorlist ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.errorlist li {
+  float: left;
+  padding: 5px 10px;
+  width: 410px;
+  color: #522;
+  background-color: #ffe4e4;
+  margin: 10px 0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+#normal_login_form li {
+  list-style: none;
+}
+dt {
+  font-size: 120%;
+}
+dd {
+  margin-top: .5em;
+  margin-left: 1.2em;
+}
+#greeting {
+  background-color: #ffffc8;
+  background-color: rgba(255, 255, 200, 0.5);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  padding: 2%;
+  width: 96%;
+  margin-top: 10px;
+  border: 4px solid #fff;
+  float: left;
+}
+#greeting #about-openhatch {
+  font-size: 140%;
+  float: left;
+  width: 100%;
+  margin-right: 20px;
+}
+#greeting #invitation {
+  font-size: 120%;
+  margin-top: 10px;
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+#greeting #next-steps {
+  float: left;
+  width: 100%;
+}
+#greeting #next-steps li {
+  font-size: 120%;
+  float: left;
+  width: 210px;
+  margin: 10px 20px 0 0;
+}
+#error #content {
+  padding: 0 300px;
+}
+#error #content .module {
+  width: 400px;
+}
+#error #content .module .head {
+  width: 96%;
+  color: #aaa;
+  padding: 2%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 96pt;
+}
+#error #content .module .body {
+  width: 90%;
+}
+.head .note {
+  float: right;
+  color: #777;
+  font-size: .9em;
+  padding: 6px;
+}
+.head .more {
+  float: right;
+  padding: 3px;
+}
+body ul.raquo_bullets {
+  margin-left: 0;
+  padding-left: 1.1em;
+  text-indent: -1em;
+  list-style: none;
+}
+body ul.raquo_bullets li {
+  margin-bottom: .4em;
+}
+body ul.raquo_bullets li:last-child {
+  margin-bottom: 0;
+}
+body ul.raquo_bullets li:before {
+  color: #999;
+  font-family: Georgia;
+  margin-right: 2px;
+  font-weight: bold;
+  content: "\00BB \0020";
+}
+.contact_us {
+  display: inline-block;
+  text-align: center;
+}
+/* CSSTODO */
+body#login .post_login_action_explanation {
+  color: #444;
+  font-size: 1.5em;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  text-align: center;
+  float: left;
+  width: 98%;
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #faffaa;
+}
+ol > li {
+  margin: 15px 0;
+}
+/* CSSTODO I think this is just missions*/
+input[rel='hint'].blur {
+  color: #777;
+}
+/* CSSTODO */
+body#people-map #search_engine_is_down_message {
+  float: left;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0;
+  font-size: 1.3em;
+}
+.ajax-loader-circle-txt-medium {
+  display: inline-block;
+  line-height: 32px;
+  padding-left: 32px;
+  background: url('http://openhatch.org/static/images/throbber.gif') no-repeat left;
+  font-weight: bold;
+  color: #444444;
+}
+/* Stuff for jQuery UI Tabs */
+/* CSSTODO */
+.ui-tabs-hide {
+  display: none !important;
+}
+.tab_nav .ui-state-active {
+  font-weight: bold;
+}
+/* Stuff initially for the events page */
+/* CSSTODO */
+.module .left-image {
+  width: 180px;
+  height: 180px;
+  float: left;
+  margin-right: 10px;
+}
+.module .name-of-event {
+  font-size: 180%;
+  margin-bottom: 1em;
+}
+.module .rest-of-box {
+  margin: 15px;
+}
+.module .little-read-more {
+  width: 100px;
+  float: right;
+}
+.module .link-without-style {
+  color: inherit;
+}
+body#landing #landing-module {
+  background: #ffffff;
+}
+body#landing #landing-module #landing-message {
+  font-size: 2em;
+  padding: 10px 0 15px 0;
+  margin: 0 0 20px 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+body#landing .submodule-container {
+  clear: both;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 30px;
+}
+body#landing .submodule {
+  float: left;
+  width: 21%;
+  margin-right: 12px;
+  font-size: 1.15em;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+body#landing p {
+  padding: 5px 0;
+}
+body#landing h4 {
+  font-size: 1.5em;
+  float: none;
+}
+body#landing .landing-page-pic {
+  height: auto;
+  width: auto;
+  max-width: 150px;
+  max-height: 150px;
+}
+body#landing .penguin {
+  float: left;
+  padding: 0 20px 20px 10px;
+  height: auto;
+  width: auto;
+  max-width: 100px;
+  max-height: 80px;
+}
+body#landing .blurb {
+  font-size: 15px;
+}
+body#landing .outreach-head {
+  font-weight: bold;
+}
+body#landing .outreach-title {
+  padding-bottom: 15px;
+  margin-bottom: -8px;
+  margin-top: 18px;
+  display: inline-block;
+}
+</style>
+
+
+
+<script type="text/javascript">
+document.documentElement.className = 'javascript_is_enabled';
+</script>
+
+
+    </head>
+
+
+    <body id="landing" class="one_column">
+
+        <div id="nav-container">
+
+
+
+
+
+<div id="nav">
+        <h1>
+            <a href="/">
+                <img src="http://openhatch.org/static/images/the-logo-bluegreen-87px.png" width="87" height="60" alt="openhatch">
+            </a>
+        </h1>
+
+        <ul id="topnavlinks">
+            <li><a href="/donate/">donate</a></li>
+            <li><a href="/missions/">training</a></li>
+            <li><a href="/events/">events</a></li>
+            <li><a href="/search/">projects</a></li>
+            <li><a href="/people/">people</a></li>
+        </ul>
+        <ul id="account-links">
+
+                <li><a href="/account/logout/?next=/">log out</a></li>
+                <li><a href="/account/settings/location/">settings</a></li>
+                <li><a href="/people/brittag/">
+
+
+                        Britta&nbsp;Gustafson
+
+
+
+                        <span class="username" style="font-size: .9em;">
+                            (brittag)
+                        </span>
+
+
+                </a></li>
+
+        </ul>
+
+</div><!-- /#nav -->&nbsp;
+
+
+
+
+
+        </div>
+
+        <div id="container">
+
+                <div id="pagetop">
+
+
+                </div>
+                <div id="content">
+
+
+    <div class="module" id="landing-module">
+        <div class="module-body">
+            <p id="landing-message">lists.openhatch.org Mailing Lists</p>
+
+	    <p>Below is a listing of all the public mailing lists on lists.openhatch.org. Click on a list name to get more information about the list, or to subscribe, unsubscribe, and change the preferences on your subscription. (List administrators, you can visit <a href="admin">the list admin overview page</a> to find the management interface for your list.)</p>
+
+<style>
+    table { font-size: 100%; padding-bottom: 1em; }
+    table tr > *:nth-child(1) { width:25%; }
+    table tr > *:nth-child(2) { width:75%; }
+</style>
+
+<h2>OpenHatch announcements and discussions that are fun for everyone</h2>
+<table width="100%" border="0">
+  <tbody>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/announce"><strong>announce</strong></a></td>
+    <td>Monthly newsletter for everyone interested in OpenHatch</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/devel"><strong>Devel</strong></a></td>
+    <td>OpenHatch site development discussion</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/events"><strong>Events</strong></a></td>
+    <td>For all outreach event organizers, discussing education and diversity</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/osctc-planning"><strong>OSCTC-planning</strong></a></td>
+    <td>Planning for Open Source Comes to Campus</td>
+  </tr>
+    <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/peers"><strong>Peers</strong></a></td>
+    <td>Discussion of how peers can improve FLOSS and the social system around it</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/publicity"><strong>Publicity</strong></a></td>
+    <td>Publicity for OpenHatchy events, projects, and the site itself</td>
+  </tr>
+</tbody></table>
+
+
+
+<h2>Other OpenHatch logistics and projects</h2>
+<table width="100%" border="0">
+  <tbody><tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/board"><strong>Board</strong></a></td>
+    <td>[Private] OpenHatch board</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/fundraising-2014"><strong>Fundraising-2014</strong></a></td>
+    <td>[Private] Fundraising campaign planning</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/greenhouse"><strong>Greenhouse</strong></a></td>
+    <td>Discussion of mentee tracker tool</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/monitoring"><strong>Monitoring</strong></a></td>
+    <td>Automated website error reports</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/monitoring-private"><strong>Monitoring-private</strong></a></td>
+    <td>[Private] This is where the live site sends error emails</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/wmf-outreach-staff"><strong>WMF-outreach-staff</strong></a></td>
+    <td>People co-organizing OpenHatch+Wikimedia outreach</td>
+  </tr>
+</tbody></table>
+
+
+<h2>Open Source Comes to Campus, specific campuses and regions</h2>
+<table width="100%" border="0">
+  <tbody>
+<tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-amherst-staff"><strong>Campus-amherst-staff</strong></a></td>
+    <td>[Private] Staff for Amherst Open Source Comes to Campus</td>
+  </tr>
+
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-berkeley-staff"><strong>Campus-berkeley-staff</strong></a></td>
+    <td>[Private] Staff for Berkeley Open Source Comes to Campus</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-boston-summer-staff"><strong>Campus-boston-summer-staff</strong></a></td>
+    <td>[Private] Staff for Boston Open Source Comes to Campus</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-chicago-staff"><strong>Campus-chicago-staff</strong></a></td>
+    <td>[Private] Staff for Chicago Open Source Comes to Campus</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-columbia-staff"><strong>Campus-columbia-staff</strong></a></td>
+    <td>[Private] Staff for Columbia Open Source Comes to Campus</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-cornell-staff"><strong>Campus-cornell-staff</strong></a></td>
+    <td>[Private] Staff for Cornell Open Source Comes to Campus</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-gmu-staff"><strong>Campus-gmu-staff</strong></a></td>
+    <td>[Private] Staff for GMU Open Source Comes to Campus</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-harvard-staff"><strong>campus-harvard-staff</strong></a></td>
+    <td>[Private] Staff for Harvard Open Source Comes to Campus</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-iub-staff"><strong>campus-IUB-staff</strong></a></td>
+    <td>[Private] Staff for IUB Open Source Comes to Campus</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-jhu-staff"><strong>campus-JHU-staff</strong></a></td>
+    <td>[Private] Staff for JHU Open Source Comes to Campus</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-morris-staff"><strong>Campus-morris-staff</strong></a></td>
+    <td>[Private] Staff for Morris Open Source Comes to Campus</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-neiu-staff"><strong>Campus-neiu-staff</strong></a></td>
+    <td>[Private] Staff for NEIU Open Source Comes to Campus</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-osu-staff"><strong>Campus-osu-staff</strong></a></td>
+    <td>[Private] Staff for OSU Open Source Comes to Campus</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-portland-staff"><strong>Campus-portland-staff</strong></a></td>
+    <td>[Private] Staff for Portland Open Source Comes to Campus</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-princeton-staff"><strong>Campus-princeton-staff</strong></a></td>
+    <td>[Private] Staff for Princeton Open Source Comes to Campus</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-purdue-staff"><strong>Campus-purdue-staff</strong></a></td>
+    <td>[Private] Staff for Purdue Open Source Comes to Campus</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-rpi-staff"><strong>campus-RPI-staff</strong></a></td>
+    <td>[Private] Staff for RPI Open Source Comes to Campus</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-rutgers-staff"><strong>Campus-rutgers-staff</strong></a></td>
+    <td>[Private] Staff for Rutgers Open Source Comes to Campus</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-uiuc-staff"><strong>campus-UIUC-staff</strong></a></td>
+    <td>[Private] Staff for UIUC Open Source Comes to Campus</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-uofa-staff"><strong>Campus-uofa-staff</strong></a></td>
+    <td>[Private] Staff for U of A Open Source Comes to Campus</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-wellesley-staff"><strong>Campus-wellesley-staff</strong></a></td>
+    <td>[Private] Staff for Wellesley Open Source Comes to Campus</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/ccsf-campus-staff"><strong>ccsf-campus-staff</strong></a></td>
+    <td>[Private] Staff for CCSF Open Source Comes to Campus</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/penn"><strong>Penn</strong></a></td>
+    <td>[Private] Staff for Penn Open Source Comes to Campus</td>
+  </tr>
+</tbody></table>
+
+  <h2>Community projects</h2>
+<table width="100%" border="0">
+  <tbody>
+     <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/barnraising"><strong>Barnraising</strong></a></td>
+    <td><em>[no description available]</em></td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/bpw-staff"><strong>Bpw-staff</strong></a></td>
+    <td>[Private] Boston Python Workshop staff</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/cpw-staff"><strong>Cpw-staff</strong></a></td>
+    <td>[Private] Chicago Python workshop staff</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/mpw-staff"><strong>mpw-staff</strong></a></td>
+    <td>Midwest Python Workshop staff</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/npw-staff"><strong>npw-staff</strong></a></td>
+    <td>[Private] NYC Python Workshop staff</td>
+  </tr>
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/openadvice"><strong>OpenAdvice</strong></a></td>
+    <td>Discussions about the Open Advice book project</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/openadvice-announce"><strong>OpenAdvice-announce</strong></a></td>
+    <td>Announcements about the Open Advice book project</td>
+  </tr>
+
+    <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/pdxpw-staff"><strong>Pdxpw-staff</strong></a></td>
+    <td>Portland Python Workshop staff</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/phlpw-staff"><strong>phlpw-staff</strong></a></td>
+    <td>[Private] Staff email list for Python workshops and project nights in Philly</td>
+  </tr>
+
+<tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/pydata-outreach-staff"><strong>pydata-outreach-staff</strong></a></td>
+    <td><em>[no description available]</em></td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/wfs-india"><strong>WFS-India</strong></a></td>
+    <td>Women in Free Software &amp; Culture in India</td>
+  </tr>
+
+
+
+
+
+</tbody></table>
+<h2>Archived OpenHatch mailing lists (inactive)</h2>
+<table width="100%" border="0">
+  <tbody>
+
+      <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/alumni"><strong>Alumni</strong></a></td>
+    <td>Discussion for Open Source Comes to Campus attendees</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/campus-announce"><strong>Campus-announce</strong></a></td>
+    <td>OpenHatchy for College/University people</td>
+  </tr>
+
+  <tr>
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/discuss"><strong>discuss</strong></a></td>
+    <td>Discussion around OpenHatch</td>
+  </tr>
+  <tr bgcolor="#dddddd">
+    <td><a href="http://lists.openhatch.org/mailman/listinfo/pedagogy"><strong>Pedagogy</strong></a></td>
+    <td><em>[no description available]</em></td>
+  </tr>
+</tbody></table>
+	</div>
+    </div>
+
+
+
+
+
+
+
+
+                </div><!-- /#content -->
+
+        </div><!-- /#container -->
+
+
+        <div id="footer-wrapper">
+          <div id="footer">
+
+	    <div class="threecol">
+              <div class="column">
+                <h3>OpenHatch organization</h3>
+
+                <ul>
+                  <li><a href="/about/">about openhatch</a></li>
+                  <li><a href="/sponsors/">sponsors</a></li>
+                  <li><a href="/blog/">blog</a></li>
+                  <li><a href="/contact/">contact</a></li>
+                  <li><a href="https://openhatch.org/wiki/Privacy_policy">privacy policy</a></li>
+                </ul>
+              </div>
+
+	      <div class="column">
+		<h3>OpenHatch web app code</h3>
+		<ul>
+		  <li><a href="http://openhatch.readthedocs.org/en/latest/README.html">Intro for developers</a></li>
+		  <li><a href="https://github.com/openhatch/oh-mainline">Github (source code)</a></li>
+		  <li><a href="http://lists.openhatch.org/mailman/listinfo/devel">Devel mailing list</a></li>
+		  <li><a href="http://openhatch.readthedocs.org/">Code docs</a></li>
+		  <li><a href="https://openhatch.org/bugs/">Bug tracker</a></li>
+		</ul>
+	      </div>
+
+	      <div class="column">
+		<h3>Other web tools</h3>
+		<ul>
+                  <li><a href="/wiki/">wiki</a></li>
+                  <li><a href="http://forum.openhatch.org/">forum</a></li>
+		</ul>
+	      </div>
+	    </div>
+
+          </div>
+        </div>
+
+
+
+	<!--Includes for the javascript bundle are in base/assets.py-->
+
+		<script type="text/javascript" src="http://openhatch.org/static/packed/openhatch.js?1389250589"></script>
+
+
+
+
+
+<script type="text/javascript">
+$(function(){
+        $('.people-list li').hoverClass('hover');
+        $('#tabbed_container_of_big_links').tabs({
+            cookie: {
+                // keeps tab choice for one day
+                expires: 1
+            }
+        });
+        $('.invisible_if_js').removeClass('invisible_if_js');
+});
+</script>
+
+
+
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="https://ssl.google-analytics.com/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-15096810-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+</body></html>

@@ -4,10 +4,63 @@ import unittest
 import main
 
 class Test(unittest.TestCase):
-    
-    def test(self):
-        content = main.getCachedPage()
-        got = main.pageToListNames(content)
+
+    def test_fancy(self):
+        got = main.pageToListNames(main.getPage("fancy","cache"))
+        wanted = ['announce',
+ 'devel',
+ 'events',
+ 'osctc-planning',
+ 'peers',
+ 'publicity',
+ 'board',
+ 'fundraising-2014',
+ 'greenhouse',
+ 'monitoring',
+ 'monitoring-private',
+ 'wmf-outreach-staff',
+ 'campus-amherst-staff',
+ 'campus-berkeley-staff',
+ 'campus-boston-summer-staff',
+ 'campus-chicago-staff',
+ 'campus-columbia-staff',
+ 'campus-cornell-staff',
+ 'campus-gmu-staff',
+ 'campus-harvard-staff',
+ 'campus-iub-staff',
+ 'campus-jhu-staff',
+ 'campus-morris-staff',
+ 'campus-neiu-staff',
+ 'campus-osu-staff',
+ 'campus-portland-staff',
+ 'campus-princeton-staff',
+ 'campus-purdue-staff',
+ 'campus-rpi-staff',
+ 'campus-rutgers-staff',
+ 'campus-uiuc-staff',
+ 'campus-uofa-staff',
+ 'campus-wellesley-staff',
+ 'ccsf-campus-staff',
+ 'penn',
+ 'barnraising',
+ 'bpw-staff',
+ 'cpw-staff',
+ 'mpw-staff',
+ 'npw-staff',
+ 'openadvice',
+ 'openadvice-announce',
+ 'pdxpw-staff',
+ 'phlpw-staff',
+ 'pydata-outreach-staff',
+ 'wfs-india',
+ 'alumni',
+ 'campus-announce',
+ 'discuss',
+ 'pedagogy']
+        self.assertEqual(wanted, got)
+                    
+    def test_mailman(self):
+        got = main.pageToListNames(main.getPage("mailman","cache"))
         wanted = ['alumni',
  'announce',
  'barnraising',
