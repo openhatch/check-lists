@@ -6,7 +6,7 @@ import main
 class Test(unittest.TestCase):
 
     def test_fancy(self):
-        got = main.pageToListNames(main.getPage("fancy","cache"))
+        got = main.pageToListNames(main.getCachedPage("fancy"))
         wanted = ['announce',
  'devel',
  'events',
@@ -60,7 +60,7 @@ class Test(unittest.TestCase):
         self.assertEqual(wanted, got)
                     
     def test_mailman(self):
-        got = main.pageToListNames(main.getPage("mailman","cache"))
+        got = main.pageToListNames(main.getCachedPage("mailman"))
         wanted = ['alumni',
  'announce',
  'barnraising',

@@ -5,8 +5,8 @@ import sys
 def getLivePage():
     return urllib2.urlopen('http://lists.openhatch.org/mailman/admin').read()
 
-def getCachedPage():
-    return open('admin').read()
+def getCachedPage(name):  # 
+    return open(name).read()
 
 def pageToListNames(content):
     raw_string = lxml.html.fromstring(content)
